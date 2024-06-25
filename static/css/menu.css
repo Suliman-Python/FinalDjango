@@ -1,0 +1,78 @@
+
+        .CatologItem{
+        max-width: 950px;
+        margin: auto;
+        padding: 15px;
+    }
+    .CatologItemBox{
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        border-radius: 8px;
+
+    }
+
+    /*.Set{
+        background: pink;
+    }*/
+
+    .pizza{
+        background: rgb(255, 236, 128);
+    }
+    .roll{
+        background: rgb(233, 233, 233);
+    }
+    .Ram{
+        background: rgba(96, 218, 232, 0.592);
+    }
+    .Dop{
+        background: rgba(0, 134, 38, 0.311);
+    }
+
+    .CatologItemBox a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .CatologItemBox img{
+        text-align: end;
+        max-width: 170px;
+        max-height: 130px;
+    }
+
+    @media  only screen and (max-width: 430px) {
+        .CatologItemBox img{
+            max-width: 130px;
+            max-height: 110px;
+        }
+
+        .CatologItemBox h5{
+            font-size: 16px;
+        }
+
+        .row {
+            --bs-gutter-x: 10px!important;
+            --bs-gutter-y: 10px!important;
+        }
+        .CatologItem{
+            padding: 10px!important;
+        }
+    }
+
+    .XalalItemDiv img{
+        width: 50px!important;
+        height: 50px!important;
+    }
+    .XalalItemDiv .caption .title{
+        display: block;
+        text-align: left;
+        font-size: 17px;
+        color: rgb(43, 43, 43);
+        margin-top: 4px;
+    }
+
+    @media  only screen and (max-width: 500px) {
+        .XalalItemDiv .caption .title{
+            font-size: 14px;
+            margin-top: 9px!important;
+        }

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>SushiCodify</title>
+
+        <!-- CSS FILES -->    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">                    
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/tooplate-crispy-kitchen.css' %}" rel="stylesheet">
+        <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    </head>
+    
+    <body>
+
+{% block content %}
+    <div class="CatologItem">
+        <div class="row gy-3">
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                <div class="CatologItemBox Set" style="background-color: #ecedf3;">
+                    <a href="{% url 'set' %}">
+                        <h5>Сеты</h5>
+                        <div class="text-end">
+                            <img class="" src="https://masahiro.kg/storage/category/2024-03-23-65fe12321744b.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                <div class="CatologItemBox Set" style="background-color: #efe4766b;">
+                    <a href="{% url 'rolls' %}">
+                        <h5>Роллы и суши</h5>
+                        <div class="text-end">
+                            <img class="" src="https://masahiro.kg/storage/category/2024-03-23-65fe128a24142.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+                        <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                <div class="CatologItemBox Set" style="background-color: #ea282138;">
+                    <a href="{% url 'napitki' %}">
+                        <h5>Напитки</h5>
+                        <div class="text-end">
+                            <img class="" src="https://masahiro.kg/storage/category/2023-01-06-63b724949bf27.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+                    </div>
+{% endblock %}
+    </body>
+</html>

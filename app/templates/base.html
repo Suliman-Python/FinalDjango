@@ -1,0 +1,101 @@
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>SushiCodify</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/tooplate-crispy-kitchen.css' %}" rel="stylesheet">
+        <link href="{% static 'css/menu.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/set.css' %}" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-white shadow-lg">
+            <div class="container">
+
+
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    SushiCodify
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'index' %}">Главная</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'set' %}">Сеты</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'rolls' %}">Роллы&Суши</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'napitki' %}">Напитки</a>
+                        </li>
+                        <li>
+                        <a class="nav-link" href="{% url 'login' %}">{{ request.user.username }}</a>
+                        </li>
+                        <li>
+                        {% if not request.user.is_authenticated %}
+                        <li>
+                        <a class="nav-link" href="{% url 'login' %}">Войти</a>
+                        </li>
+                        <li>
+                        <a class="nav-link" href="{% url 'register' %}">Регистрация</a>
+                        </li>
+                        {% endif %}
+                        <li>
+                        <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    {% block content %}
+    {% endblock %}
+
+<div class="footer-box-item mt-5 p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-m-3">
+        <h4>Бесплатная доставка до 5 км</h4>
+        <p>(При заказе от 699 сом )</p>
+      </div>
+      <div class="col-m-3">
+        <h4>45 минут</h4>
+        <p>Среднее время доставки.</p>
+      </div>
+      <div class="col-m-3">
+        <h4 class="">
+          <img src="https://masahiro.kg/assets/frontend/img/svgexport-25-1.svg" alt="">
+          Зона доставки
+        </h4>
+      </div>
+        <div>
+            <h4>Контакты</h4>
+            <p>0990554433</p>
+            <p>0999887766</p>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
